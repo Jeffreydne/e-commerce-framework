@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   // find one category by its `id` value & include its associated Products
+   // XXXX ALSO  // ADD if statement see activity 28 travelerRoutes.js line 52 XXXXXXXXXXXXXXX
   try {
     const catData = await Category.findByPk(req.params.id, {
       include: { model: Product },
@@ -40,6 +41,8 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
   //XXXXXXX DOES THIS PUT WORK????? XXXXXXXXX
+   // ALSO DO I NEED TO ADD CASCADE ?????????????????????
+    // XXXX ALSO  // ADD if statement see activity 28 travelerRoutes.js line 52 XXXXXXXXXXXXXXX
    try {
     const catData = await Category.update(
       { category_name: req.params.id}, 
@@ -53,6 +56,8 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
+  // DO I NEED TO ADD CASCADE ?????????????????????
+   // XXXX ALSO  // ADD if statement see activity 28 travelerRoutes.js line 52 XXXXXXXXXXXXXXX
    try {
     const catData = await Category.destroy({
       where: {
