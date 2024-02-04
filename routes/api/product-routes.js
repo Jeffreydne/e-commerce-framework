@@ -21,14 +21,14 @@ router.get('/:id', async (req, res) => {
   // XXXX ALSO  // ADD if statement see activity 28 travelerRoutes.js line 52 XXXXXXXXXXXXXXX
   try {
     const prodData = await Product.findByPk(req.params.id, {
-      include: [{model: Category }, {model: Tag, through: ProductTag, as: 'tag_for_product' }],
+      include: [{model: Category }, {model: Tag, through: ProductTag, as: 'product_to_be_tagged' }]
     });
     res.status(200).json(prodData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
+ 
 // create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...

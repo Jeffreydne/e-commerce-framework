@@ -18,7 +18,7 @@ router.get('/:id', async (req, res) => {
    // XXXX ALSO  // ADD if statement see activity 28 travelerRoutes.js line 52 XXXXXXXXXXXXXXX
    try {
     const tagData = await Tag.findByPk(req.params.id, {
-      include: {model: Product, through: ProductTag, as: 'product_to_be_tagged' },
+      include: {model: Product, through: ProductTag, as: 'tag_for_product' },
     });
     res.status(200).json(tagData);
   } catch (err) {
