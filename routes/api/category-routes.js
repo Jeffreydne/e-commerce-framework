@@ -40,9 +40,8 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
-  //XXXXXXX DOES THIS PUT WORK????? XXXXXXXXX
-   // ALSO DO I NEED TO ADD CASCADE-probably not???????
-    // XXXX ALSO  // ADD if statement see activity 28 travelerRoutes.js line 52 XXXXXXXXXXXXXXX
+ 
+    // XXXX ALSO ADD if statement see activity 28 travelerRoutes.js line 52 XXXXXXXXXXXXXXX
    try {
     const catData = await Category.update(
       { category_name: req.body.category_name}, 
