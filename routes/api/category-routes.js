@@ -45,8 +45,10 @@ router.put('/:id', async (req, res) => {
     // XXXX ALSO  // ADD if statement see activity 28 travelerRoutes.js line 52 XXXXXXXXXXXXXXX
    try {
     const catData = await Category.update(
-      { category_name: req.params.id}, 
-      { where: req.params.id },
+      { category_name: req.body.category_name}, 
+      { where: 
+        { id: req.params.id }
+      },
     );
     res.status(200).json(catData);
   } catch (err) {
