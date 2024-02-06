@@ -25,7 +25,7 @@ An e-commerce site prototype
 
 ## Description
 
-[Watch the video describing how to use the app](XXXXXXXXXXXXXXXXX)
+[Watch the video describing how to use the app](https://watch.screencastify.com/v/YRnlxpdC2O0OIwk1gkx7)
 
 [Visit the Github repository](https://github.com/Jeffreydne/logoMakerSVG)
 
